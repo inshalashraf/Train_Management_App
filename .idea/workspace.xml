@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f33ae58-a5e3-4366-85cc-8c0dc8066abf" name="Changes" comment="" />
+    <list default="true" id="0f33ae58-a5e3-4366-85cc-8c0dc8066abf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Train_App/src/uc1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Train_App/src/uc1.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,11 +38,15 @@
     "Application.uc1.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/train-booking",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mdins/OneDrive/Documents/RA2411056010013/Train_Management_App",
-    "onboarding.tips.debug.path": "C:/Users/mdins/OneDrive/Documents/RA2411056010013/Train_Management_App/TrainApp/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/mdins/OneDrive/Documents/RA2411056010013/Train_Management_App/Train_App/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">

@@ -5,17 +5,31 @@ public class uc1 {
 
     public static void main(String[] args) {
 
-        // Display welcome banner
         System.out.println("======================================");
-        System.out.println("=== Train Consist Management App ===");
+        System.out.println("UC2 - Add Passenger Bogies to Train");
         System.out.println("======================================\n");
 
-        // Create a dynamic list to store train bogies
-        List<String> trainConsist = new ArrayList<>();
+        List<String> passengerBogies = new ArrayList<>();
 
-        // Display initial consist information
-        System.out.println("Train initialized successfully...");
-        System.out.println("Initial number of bogies: " + trainConsist.size());
-        System.out.println("Current train consist: " + trainConsist);
+        passengerBogies.add("Bogie-1");
+        passengerBogies.add("Bogie-2");
+        passengerBogies.add("Bogie-3");
+
+        System.out.println("Bogies after adding:");
+        System.out.println(passengerBogies);
+
+        System.out.println("\nTotal bogies: " + passengerBogies.size());
+
+        if (passengerBogies.contains("Bogie-2")) {
+            System.out.println("Bogie-2 is available in the train.");
+        }
+
+        passengerBogies.remove("Bogie-1");
+
+        System.out.println("\nBogies after removing Bogie-1:");
+        System.out.println(passengerBogies);
+
+        System.out.println("\nFinal Train Consist:");
+        System.out.println(passengerBogies);
     }
 }
