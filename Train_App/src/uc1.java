@@ -1,26 +1,32 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
+import java.util.List;
 
 public class uc1 {
 
     public static void main(String[] args) {
 
         System.out.println("======================================");
-        System.out.println("UC3 - Track Unique Bogie IDs");
+        System.out.println("UC4 - Maintain Ordered Bogie Consist");
         System.out.println("======================================\n");
 
-        Set<String> bogies = new HashSet<>();
+        List<String> trainConsist = new LinkedList<>();
 
-        bogies.add("BG101");
-        bogies.add("BG102");
-        bogies.add("BG103");
-        bogies.add("BG104");
-        bogies.add("BG101");
-        bogies.add("BG102");
+        trainConsist.add("Bogie-1");
+        trainConsist.add("Bogie-2");
+        trainConsist.add("Bogie-3");
 
-        System.out.println("Unique Bogie IDs in Train:");
-        System.out.println(bogies);
+        System.out.println("Initial Train Consist:");
+        System.out.println(trainConsist);
 
-        System.out.println("Total Unique Bogies: " + bogies.size());
+        trainConsist.add(1, "Bogie-1A");
+
+        System.out.println("\nAfter inserting Bogie-1A at position 1:");
+        System.out.println(trainConsist);
+
+        trainConsist.remove(0);
+        trainConsist.remove(trainConsist.size() - 1);
+
+        System.out.println("\nAfter removing front and rear bogies:");
+        System.out.println(trainConsist);
     }
 }
