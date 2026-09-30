@@ -43,6 +43,10 @@ java TrainManagementApp
 3. Remove the first and last bogies.
 4. Print the final consist.
 
+## Complexity Notes
+
+For the current `LinkedList` implementation, insertion/removal at the ends is efficient, while insertion by index requires traversal to the target position. This makes the project a useful example for connecting Java Collections with basic data-structure trade-offs.
+
 ## Learning Goal
 
 This project demonstrates practical use of Java's `List` interface and `LinkedList` implementation for ordered data that changes through insertion and removal operations.
