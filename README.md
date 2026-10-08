@@ -54,3 +54,6 @@ This project demonstrates practical use of Java's `List` interface and `LinkedLi
 ## Status
 
 The project is currently a console-based learning application. Future use cases can add train search, passenger booking, cancellation, seat management, and persistent storage.
+## Extension Ideas
+
+The current collection-based design can be extended with search by bogie ID, validation for insertion positions, and automated tests for each train-consist operation.
