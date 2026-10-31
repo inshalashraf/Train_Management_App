@@ -1,59 +1,66 @@
 # Train Management App
 
-A Java console application for practicing train-consist management using standard collection data structures.
+A Java console application for managing an ordered train consist using the Java Collections Framework and `LinkedList`.
 
 ## Features
 
-- Maintains an ordered train consist
-- Inserts a bogie at a specific position
-- Removes the front and rear bogies
-- Displays the state of the consist after each operation
+- Display all bogies in their current order
+- Add a bogie at the front or rear
+- Insert a bogie at a chosen zero-based position
+- Remove the first or last bogie
+- Search for a bogie by ID
+- Remove a bogie by ID
+- Validate blank IDs, duplicate IDs, invalid positions and empty-train removals
+- Run automated tests without third-party libraries
 
 ## Tech Stack
 
-- Java
-- Java Collections Framework
-- `LinkedList`
+- Java 17
+- `LinkedList` and the `List` interface
+- Java standard library
+- GitHub Actions for continuous integration
 
 ## Project Structure
 
 ```text
 Train_Management_App/
+├── .github/workflows/java-tests.yml
 ├── Train_App/
-│   └── src/
-│       ├── TrainManagementApp.java   # Main application
-│       └── uc1.java                  # Original use-case implementation
+│   ├── src/
+│   │   ├── TrainConsist.java
+│   │   └── TrainManagementApp.java
+│   └── test/
+│       └── TrainConsistTest.java
 ├── .gitignore
 └── README.md
 ```
 
-## Run
+## Run the application
 
-From `Train_App/src`:
+From the repository root:
 
 ```bash
-javac TrainManagementApp.java
-java TrainManagementApp
+mkdir -p build
+javac -d build Train_App/src/TrainConsist.java Train_App/src/TrainManagementApp.java
+java -cp build TrainManagementApp
 ```
 
-## Example Flow
+The application starts with three sample bogies. Use the numbered menu to manage the consist.
 
-1. Create an ordered consist containing three bogies.
-2. Insert `Bogie-1A` at position 1.
-3. Remove the first and last bogies.
-4. Print the final consist.
+## Run the tests
 
-## Complexity Notes
+```bash
+mkdir -p build
+javac -d build Train_App/src/TrainConsist.java Train_App/test/TrainConsistTest.java
+java -cp build TrainConsistTest
+```
 
-For the current `LinkedList` implementation, insertion/removal at the ends is efficient, while insertion by index requires traversal to the target position. This makes the project a useful example for connecting Java Collections with basic data-structure trade-offs.
+The test runner checks insertion, removal, searching, duplicate and blank IDs, invalid positions, and empty-list behavior.
 
-## Learning Goal
+## Data Structure Notes
 
-This project demonstrates practical use of Java's `List` interface and `LinkedList` implementation for ordered data that changes through insertion and removal operations.
+The application uses a `LinkedList` to preserve bogie order. Adding or removing at either end is efficient. Insertion or searching by position/ID requires traversal.
 
-## Status
+## Scope
 
-The project is currently a console-based learning application. Future use cases can add train search, passenger booking, cancellation, seat management, and persistent storage.
-## Extension Ideas
-
-The current collection-based design can be extended with search by bogie ID, validation for insertion positions, and automated tests for each train-consist operation.
+This project focuses on train-consist and bogie management. It is an educational console application, not a railway reservation or ticketing system.
