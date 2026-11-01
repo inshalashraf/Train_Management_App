@@ -10,6 +10,8 @@ public class TrainConsistTest {
         testSearchAndRemoveById();
         testInvalidInputs();
         testEmptyRemoval();
+        testSnapshotIsImmutable();
+        testConstructorRejectsDuplicateIds();
         System.out.println("All " + passed + " train consist tests passed.");
     }
 
@@ -50,6 +52,18 @@ public class TrainConsistTest {
         check(train.isEmpty() && train.size() == 0, "empty state");
         expect(IllegalStateException.class, train::removeFirst);
         expect(IllegalStateException.class, train::removeLast);
+    }
+
+    private static void testSnapshotIsImmutable() {
+        TrainConsist train = new TrainConsist(List.of("A", "B"));
+        List<String> snapshot = train.getBogies();
+        expect(UnsupportedOperationException.class, () -> snapshot.add("C"));
+        train.addLast("C");
+        check(snapshot.equals(List.of("A", "B")), "snapshot does not change with the train");
+    }
+
+    private static void testConstructorRejectsDuplicateIds() {
+        expect(IllegalArgumentException.class, () -> new TrainConsist(List.of("A", "A")));
     }
 
     private static void check(boolean condition, String name) {
